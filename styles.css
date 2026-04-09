@@ -1112,6 +1112,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     text-align: center;
+    margin-bottom: 15px;
   }
 
   .stat-item {
