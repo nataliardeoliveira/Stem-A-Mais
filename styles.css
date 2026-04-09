@@ -273,7 +273,7 @@ nav {
 .section {
   padding: clamp(2.5rem, 5vw, 4.4rem) clamp(1rem, 4vw, 4rem);
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px;
   width: 100%;
 }
 
