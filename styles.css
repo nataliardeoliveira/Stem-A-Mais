@@ -400,7 +400,7 @@ nav {
 }
 
 .featured-visual .logo img {
-  width: clamp(100px, 50%, 200px);
+  width: clamp(200px, 50%, 300px);
   height: auto;
   max-width: 100%;
   display: block;
@@ -1115,7 +1115,7 @@ footer {
 .featured-visual {
   aspect-ratio: auto;
   min-height: 200px;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
   .nav-links {
