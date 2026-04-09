@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM a Mais — Oportunidades Acadêmicas em STEM</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav>
+    <a class="nav-logo" onclick="showPage('home')" style="cursor:pointer">STEM <span>a Mais</span></a>
+    <ul class="nav-links">
+      <li><a class="active" id="nav-home" onclick="showPage('home')">Home</a></li>
+      <li><a id="nav-extracurriculars" onclick="showPage('extracurriculars')">Oportunidades</a></li>
+      <li><a id="nav-about" onclick="showPage('about')">Sobre</a></li>
+      <!-- <li><a id="nav-newsletters" onclick="showPage('newsletters')">Newsletters</a></li> -->
+    </ul>
+  </nav>
+
+  <div id="page-home" class="page active">
+
+    <section class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-badge">✦ Oportunidades de STEM</span>
+        <h1>Encontre sua próxima<br><em>oportunidade</em> acadêmica</h1>
+        <p>A STEM a Mais conecta estudantes brasileiros a programas de pesquisa, olimpíadas, estágios e bolsas nas
+          áreas de Ciência, Tecnologia, Engenharia e Matemática.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="showPage('extracurriculars')">Explorar Oportunidades</button>
+          <!-- <button class="btn-outline" onclick="showPage('newsletters')">Receber no seu E-mail</button> -->
+        </div>
+      </div>
+    </section>
+
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-num">200+</span>
+        <span class="stat-label">Oportunidades divulgadas</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">7k+</span>
+        <span class="stat-label">Estudantes alcançados</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">98%</span>
+        <span class="stat-label">Das oportunidades gratuitas <br>
+           ou com bolsa</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="section-tag">Por que importa</span>
+      <div class="featured-split">
+        <div>
+          <h2 class="section-title">Oportunidades existem.<br>Falta quem <em
+              style="font-style:italic;color:var(--purple-400)">mostre o caminho.</em></h2>
+          <p class="section-sub">Olimpíadas, programas de pesquisa, de verão, estágios e bolsas de
+            estudo ficam inacessíveis para quem não sabe onde procurar. A STEM a Mais democratiza esse acesso.</p>
+          <br>
+          <button class="btn-primary" onclick="showPage('extracurriculars')" style="margin-top:1rem">Ver todas as
+            oportunidades →</button>
+        </div>
+        <div class="featured-visual">
+          <!-- <span class="featured-visual-title">Oportunidades em destaque</span>
+          <ul class="opp-mini-list">
+            <li class="opp-mini-item"><span class="opp-mini-dot"></span>OBMEP — Olimpíada Brasileira de Matemática<span
+                class="opp-mini-tag">Olimpíada</span></li>
+            <li class="opp-mini-item"><span class="opp-mini-dot"></span>PROBIC — Programa de Bolsas de Iniciação
+              Científica<span class="opp-mini-tag">Pesquisa</span></li>
+            <li class="opp-mini-item"><span class="opp-mini-dot"></span>Research Science Institute (RSI) — MIT<span
+                class="opp-mini-tag">Programa</span></li>
+            <li class="opp-mini-item"><span class="opp-mini-dot"></span>Google Summer of Code<span
+                class="opp-mini-tag">Programa</span></li>
+            <li class="opp-mini-item"><span class="opp-mini-dot"></span>Regeneron ISEF<span
+                class="opp-mini-tag">Conferência</span></li>
+          </ul>
+          <span style="font-size:0.78rem;color:rgba(0, 0, 0);font-weight:300">Atualizado semanalmente pela
+            equipe STEM a Mais</span> -->
+          <div class="logo">
+            <img src="img/logo.png" width="300px" height="180px">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <span class="section-tag">O que oferecemos</span>
+      <h2 class="section-title">Tudo que você precisa<br>para se destacar em STEM</h2>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search-heart"
+              viewBox="0 0 16 16">
+              <path d="M6.5 4.482c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018" />
+              <path
+                d="M13 6.5a6.47 6.47 0 0 1-1.258 3.844q.06.044.115.098l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1-.1-.115h.002A6.5 6.5 0 1 1 13 6.5M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11" />
+            </svg>
+          </div>
+          <h3>Pesquisa & Iniciação Científica</h3>
+          <p>Programas de pesquisa em universidades brasileiras e internacionais, com e sem remuneração, para estudantes
+            de ensino médio e graduação.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z" />
+              <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
+            </svg>
+          </div>
+          <h3>Olimpíadas Científicas</h3>
+          <p>Competições nacionais e internacionais em matemática, física, química, biologia, informática e astronomia.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-piggy-bank-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069q0-.218-.02-.431c.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a1 1 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.74.74 0 0 0-.375.562c-.024.243.082.48.32.654a2 2 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595m7.173 3.876a.6.6 0 0 1-.098.21l-.044-.025c-.146-.09-.157-.175-.152-.223a.24.24 0 0 1 .117-.173c.049-.027.08-.021.113.012a.2.2 0 0 1 .064.199m-8.999-.65a.5.5 0 1 1-.276-.96A7.6 7.6 0 0 1 7.964 3.5c.763 0 1.497.11 2.18.315a.5.5 0 1 1-.287.958A6.6 6.6 0 0 0 7.964 4.5c-.64 0-1.255.09-1.826.254ZM5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0" />
+            </svg>
+          </div>
+          <h3>Bolsas & Financiamentos</h3>
+          <p>Bolsas de estudo e auxílios para participação em programas.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411" />
+            </svg>
+          </div>
+          <h3>Eventos</h3>
+          <p>Simpósios, hackathons, congressos estudantis e feiras de ciências onde você pode apresentar pesquisas e
+            fazer networking.</p>
+        </div>
+        <!-- <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-open-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M8.941.435a2 2 0 0 0-1.882 0l-6 3.2A2 2 0 0 0 0 5.4v.314l6.709 3.932L8 8.928l1.291.718L16 5.714V5.4a2 2 0 0 0-1.059-1.765zM16 6.873l-5.693 3.337L16 13.372v-6.5Zm-.059 7.611L8 10.072.059 14.484A2 2 0 0 0 2 16h12a2 2 0 0 0 1.941-1.516M0 13.373l5.693-3.163L0 6.873z" />
+            </svg>
+          </div>
+          <h3>Newsletter Semanal</h3>
+          <p>Receba toda semana um resumo das oportunidades com prazo próximo, diretamente na sua caixa de entrada.
+            Nunca perca um deadline.</p>
+        </div> -->
+        <div class="card">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-highlighter"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M11.096.644a2 2 0 0 1 2.791.036l1.433 1.433a2 2 0 0 1 .035 2.791l-.413.435-8.07 8.995a.5.5 0 0 1-.372.166h-3a.5.5 0 0 1-.234-.058l-.412.412A.5.5 0 0 1 2.5 15h-2a.5.5 0 0 1-.354-.854l1.412-1.412A.5.5 0 0 1 1.5 12.5v-3a.5.5 0 0 1 .166-.372l8.995-8.07zm-.115 1.47L2.727 9.52l3.753 3.753 7.406-8.254zm3.585 2.17.064-.068a1 1 0 0 0-.017-1.396L13.18 1.387a1 1 0 0 0-1.396-.018l-.068.065zM5.293 13.5 2.5 10.707v1.586L3.707 13.5z" />
+            </svg>
+          </div>
+          <h3>Programas de Verão</h3>
+          <p>Summer programs nacionais e internacionais em STEM, muitos com bolsa integral, para estudantes de alto
+            desempenho.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- <div class="section">
+      <span class="section-tag">Depoimentos</span>
+      <h2 class="section-title">Estudantes que encontraram<br>seu caminho pela STEM a Mais</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Não sabia que o RSI aceitava estudantes brasileiros. Graças à newsletter da STEM
+            a Mais, me inscrevi a tempo e hoje faço pesquisa no MIT."</p>
+          <div class="testimonial-author">Beatriz A.</div>
+          <div class="testimonial-role">3º ano do Ensino Médio · São Paulo</div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"O catálogo de olimpíadas me ajudou a montar um cronograma de estudos. Conquistei
+            medalha de bronze na OBI e ouro na OBMEP no mesmo ano."</p>
+          <div class="testimonial-author">Rafael M.</div>
+          <div class="testimonial-role">Ensino Médio · Recife</div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Encontrei um programa de iniciação científica na USP que eu jamais teria
+            descoberto sozinha. Hoje tenho publicação no currículo antes da universidade."</p>
+          <div class="testimonial-author">Camila F.</div>
+          <div class="testimonial-role">1º ano de Graduação · Brasília</div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Convite para a newsletter -->
+    <!-- <div class="section">
+      <div class="cta-block">
+        <h2>Receba as melhores oportunidades<br>toda semana</h2>
+        <p>Mais de 2.000 estudantes já recebem nossa newsletter. Junte-se a eles e nunca perca um deadline importante.
+        </p>
+        <button class="btn-primary" onclick="showPage('newsletters')">Inscrever-se e receber gratuitamente →</button>
+      </div>
+    </div> -->
+
+    <div class="section">
+      <div class="cta-block">
+        <h2>Quer fazer parte da equipe?</h2>
+        <p>Buscamos voluntários apaixonados por STEM e educação. Se você quer ajudar a conectar estudantes a
+          oportunidades transformadoras
+          , se inscreva abaixo.</p>
+        <button class="btn-primary"><a href="#" target="_blank">Quero ser voluntário →</a></button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="footer-logo">STEM <span>a Mais</span></span>
+        <p class="footer-tagline">Democratizando o acesso a oportunidades acadêmicas em STEM para estudantes
+          brasileiros.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('extracurriculars')">Oportunidades</a></li>
+          <li><a onclick="showPage('about')">Sobre nós</a></li>
+          <!-- <li><a onclick="showPage('newsletters')">Newsletter</a></li> -->
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Áreas</h4>
+        <ul>
+          <li><a>Matemática</a></li>
+          <li><a>Física & Química</a></li>
+          <li><a>Biologia & Medicina</a></li>
+          <li><a>Computação</a></li>
+          <li><a>Engenharias</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a hred="mailto:stemamais.contato@gmail.com">stemamais.contato@gmail.com</a></li>
+          <li><a target="_blank" href="https://www.instagram.com/stemamais?igsh=MXJzejV0bGpldTZ0">Instagram</a></li>
+          <li><a target="_blank" href="https://www.tiktok.com/@stemamais?_r=1&_t=ZS-94nvWKE4wQU">Tiktok</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>© 2026 STEM a Mais. Todos os direitos reservados.</p>
+      <p>Organização sem fins lucrativos</p>
+    </div>
+  </div>
+
+  <!-- ======================== EXTRACURRICULARS ======================== -->
+  <div id="page-extracurriculars" class="page">
+     <div class="section" style="padding-top:8rem">
+      <span class="section-tag">Encontre aqui</span>
+      <h1 class="section-title">Oportunidades em STEM</h1>
+      <p class="section-sub">Explore programas de pesquisa, olimpíadas, bolsas e conferências, todas verificadas e
+        organizadas para você.</p>
+
+      <br>
+      <input class="search-bar" type="text" id="opp-search" placeholder="Buscar por nome, área ou palavra-chave..."
+        oninput="filterOpps()">
+
+      <div class="filter-row">
+        <button class="filter-btn active" onclick="setFilter(this,'all')">Todos</button>
+        <button class="filter-btn" onclick="setFilter(this,'pesquisa')">Pesquisa</button>
+        <button class="filter-btn" onclick="setFilter(this,'olimpiada')">Olimpíada/Competição</button>
+        <button class="filter-btn" onclick="setFilter(this,'programa')">Programas</button>
+        <button class="filter-btn" onclick="setFilter(this,'bolsa')">Bolsas</button>
+      </div>
+
+      <div class="opp-grid" id="opp-grid">
+      </div>
+    </div>
+
+     <div class="section">
+      <span class="section-tag">Seja voluntário</span>
+      <div class="cta-block">
+        <h2>Quer fazer parte da equipe?</h2>
+        <p>Buscamos voluntários apaixonados por STEM e educação. Se você quer ajudar a conectar estudantes a
+          oportunidades transformadoras, se inscreva abaixo.</p>
+        <button class="btn-primary"><a href="#" target="_blank">Quero ser voluntário →</a></button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="footer-logo">STEM <span>a Mais</span></span>
+        <p class="footer-tagline">Democratizando o acesso a oportunidades acadêmicas em STEM para estudantes
+          brasileiros.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('extracurriculars')">Oportunidades</a></li>
+          <li><a onclick="showPage('about')">Sobre nós</a></li>
+          <!-- <li><a onclick="showPage('newsletters')">Newsletter</a></li> -->
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Áreas</h4>
+        <ul>
+          <li><a>Matemática</a></li>
+          <li><a>Física & Química</a></li>
+          <li><a>Biologia & Medicina</a></li>
+          <li><a>Computação</a></li>
+          <li><a>Engenharias</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a>stemamais.contato@gmail.com</a></li>
+          <li><a target="_blank" href="https://www.instagram.com/stemamais?igsh=MXJzejV0bGpldTZ0">Instagram</a></li>
+          <li><a target="_blank" href="https://www.tiktok.com/@stemamais?_r=1&_t=ZS-94nvWKE4wQU">Tiktok</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>© 2026 STEM a Mais. Todos os direitos reservados.</p>
+      <p>Organização sem fins lucrativos</p>
+    </div>
+  </div>
+
+  <!-- ======================== ABOUT ======================== -->
+  <div id="page-about" class="page">
+    <div class="about-hero">
+      <div class="about-text">
+        <span class="section-tag">Sobre nós</span>
+        <h1>Movida pela crença de que <em style="font-style:italic;color:var(--purple-400)">talento não tem
+            endereço</em></h1>
+        <p>A STEM a Mais nasceu em 2024 com o objetivo de tornar oportunidades que são pouco promovidas ou apenas divulgadas em ambientes mais privilegiados, mais acessíveis a todos os estudantes, especialmente os de escola pública. </p>
+        <p>Somos uma organização 100% voluntária fundada por uma estudante da área de STEM,
+          comprometida em nivelar o campo para quem vem de escolas públicas, cidades do interior e famílias sem contato
+          com o universo acadêmico.</p>
+        <!-- <button class="btn-primary" onclick="showPage('newsletters')">Juntar-se à comunidade</button> -->
+      </div>
+      <div class="about-visual">
+        <h1>Objetivo: </h1>
+        <div class="mission-item">
+          <span class="mission-num">01</span>
+          <div class="mission-text">
+            <h4>Democratizar o acesso</h4>
+            <p>Reunir e organizar oportunidades que estão dispersas ou mal divulgadas, tornando-as acessíveis a qualquer
+              estudante brasileiro.</p>
+          </div>
+        </div>
+        <div class="mission-item">
+          <span class="mission-num">02</span>
+          <div class="mission-text">
+            <h4>Informar com clareza</h4>
+            <p>Apresentar cada oportunidade com todos os detalhes relevantes: elegibilidade, processo seletivo, prazos e
+              benefícios.</p>
+          </div>
+        </div>
+        <div class="mission-item">
+          <span class="mission-num">03</span>
+          <div class="mission-text">
+            <h4>Construir comunidade</h4>
+            <p>Conectar estudantes, mentores e organizações que acreditam no potencial da próxima geração de cientistas
+              e engenheiros brasileiros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <span class="section-tag">Fundadora</span>
+      <h2 class="section-title">Quem fundou o<br>STEM a Mais?</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">NR</div>
+          <div class="team-name">Natália Rocha</div>
+          <div class="team-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
+              viewBox="0 0 16 16">
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+            </svg>
+          </div>
+          <div class="team-role">Fundadora & Líder</div>
+          <div class="team-area">Técnica em Informática e aplicante para universidades nos EUA</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="cta-block">
+        <h2>Quer fazer parte da equipe?</h2>
+        <p>Buscamos voluntários apaixonados por STEM e educação. Se você quer ajudar a conectar estudantes a
+          oportunidades transformadoras, se inscreva abaixo.</p>
+        <button class="btn-primary"><a href="#" target="_blank">Quero ser voluntário →</a></button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-brand">
+        <span class="footer-logo">STEM <span>a Mais</span></span>
+        <p class="footer-tagline">Democratizando o acesso a oportunidades acadêmicas em STEM para estudantes
+          brasileiros.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('extracurriculars')">Oportunidades</a></li>
+          <li><a onclick="showPage('about')">Sobre nós</a></li>
+          <!-- <li><a onclick="showPage('newsletters')">Newsletter</a></li> -->
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Áreas</h4>
+        <ul>
+          <li><a>Matemática</a></li>
+          <li><a>Física & Química</a></li>
+          <li><a>Biologia & Medicina</a></li>
+          <li><a>Computação</a></li>
+          <li><a>Engenharias</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:stemamais.contato@gmail.com">stemamais.contato@gmail.com</a></li>
+          <li><a target="_blank" href="https://www.instagram.com/stemamais?igsh=MXJzejV0bGpldTZ0">Instagram</a></li>
+          <li><a target="_blank" href="https://www.tiktok.com/@stemamais?_r=1&_t=ZS-94nvWKE4wQU">Tiktok</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>© 2026 STEM a Mais. Todos os direitos reservados.</p>
+      <p>Organização sem fins lucrativos</p>
+    </div>
+  </div>
+
+  <!-- ======================== NEWSLETTERS ======================== -->
+  <div id="page-newsletters" class="page">
+    <div class="newsletter-hero">
+      <span class="hero-badge">✦ Toda semana na sua caixa de entrada</span>
+      <h1>Newsletter<br><em style="font-style:italic;color:var(--purple-400)">STEM a Mais</em></h1>
+      <p>Receba toda semana uma seleção curada das melhores oportunidades em STEM: olimpíadas, pesquisas, bolsas e
+        programas — com prazos, dicas e novidades da comunidade.</p>
+
+      <div class="newsletter-form-box">
+        <div id="form-content">
+          <div class="form-group">
+            <label class="form-label">Nome completo</label>
+            <input class="form-input" type="text" id="nl-name" placeholder="Seu nome">
+          </div>
+          <div class="form-group">
+            <label class="form-label">E-mail</label>
+            <input class="form-input" type="email" id="nl-email" placeholder="seu@email.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nível de ensino</label>
+            <select class="form-input" id="nl-nivel">
+              <option value="" disabled selected>Selecione seu nível</option>
+              <option>Ensino Médio</option>
+              <option>Graduação</option>
+              <option>Pós-graduação</option>
+              <option>Professor / Educador</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" style="margin-bottom:0.8rem">Áreas de interesse</label>
+            <div class="checkbox-group">
+              <label class="checkbox-item"><input type="checkbox"> <label>Matemática</label></label>
+              <label class="checkbox-item"><input type="checkbox"> <label>Física</label></label>
+              <label class="checkbox-item"><input type="checkbox"> <label>Biologia</label></label>
+              <label class="checkbox-item"><input type="checkbox"> <label>Química</label></label>
+              <label class="checkbox-item"><input type="checkbox"> <label>Computação</label></label>
+              <label class="checkbox-item"><input type="checkbox"> <label>Engenharia</label></label>
+            </div>
+          </div>
+          <button class="btn-primary" style="width:100%;padding:1rem;font-size:1rem"
+            onclick="subscribeNewsletter()">Inscrever-se gratuitamente →</button>
+          <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);text-align:center;margin-top:0.8rem;font-weight:300">
+            Sem spam. Cancele quando quiser.</p>
+        </div>
+        <div class="success-msg" id="success-msg">
+          <p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-hand-thumbs-up-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M6.956 1.745C7.021.81 7.908.087 8.864.325l.261.066c.463.116.874.456 1.012.965.22.816.533 2.511.062 4.51a10 10 0 0 1 .443-.051c.713-.065 1.669-.072 2.516.21.518.173.994.681 1.2 1.273.184.532.16 1.162-.234 1.733q.086.18.138.363c.077.27.113.567.113.856s-.036.586-.113.856c-.039.135-.09.273-.16.404.169.387.107.819-.003 1.148a3.2 3.2 0 0 1-.488.901c.054.152.076.312.076.465 0 .305-.089.625-.253.912C13.1 15.522 12.437 16 11.5 16H8c-.605 0-1.07-.081-1.466-.218a4.8 4.8 0 0 1-.97-.484l-.048-.03c-.504-.307-.999-.609-2.068-.722C2.682 14.464 2 13.846 2 13V9c0-.85.685-1.432 1.357-1.615.849-.232 1.574-.787 2.132-1.41.56-.627.914-1.28 1.039-1.639.199-.575.356-1.539.428-2.59z" />
+            </svg>
+            Inscrição confirmada! Bem-vindo(a) à comunidade STEM a Mais. Verifique seu e-mail para a confirmação.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="editions-section">
+      <div class="divider"></div>
+      <div style="padding-top:4rem">
+        <span class="section-tag">Edições anteriores</span>
+        <h2 class="section-title">Confira o que já publicamos</h2>
+        <p class="section-sub">Todas as edições são públicas. Veja o que nossos assinantes recebem toda semana.</p>
+        <div class="editions-grid">
+          <div class="edition-card">
+            <span class="edition-num">12</span>
+            <div class="edition-info">
+              <div class="edition-title">Olimpíadas de março: 8 competições com inscrições abertas</div>
+              <div class="edition-date">24 de março de 2026</div>
+              <p class="edition-desc">OBMEP, OBF, OBQ, OBI e mais. Guia completo com datas, elegibilidade e materiais de
+                preparação.</p>
+            </div>
+          </div>
+          <div class="edition-card">
+            <span class="edition-num">11</span>
+            <div class="edition-info">
+              <div class="edition-title">Summer programs internacionais: ainda dá tempo de se inscrever</div>
+              <div class="edition-date">17 de março de 2026</div>
+              <p class="edition-desc">RSI, PRIMES, PROMYS e outros programas de verão com bolsa integral para estudantes
+                de ensino médio.</p>
+            </div>
+          </div>
+          <div class="edition-card">
+            <span class="edition-num">10</span>
+            <div class="edition-info">
+              <div class="edition-title">Pesquisa na graduação: como entrar em um laboratório sem experiência</div>
+              <div class="edition-date">10 de março de 2026</div>
+              <p class="edition-desc">Guia prático com template de e-mail para professores, o que falar e como montar
+                seu primeiro portfólio científico.</p>
+            </div>
+          </div>
+          <div class="edition-card">
+            <span class="edition-num">09</span>
+            <div class="edition-info">
+              <div class="edition-title">Bolsas FAPESP para estudantes do ensino médio</div>
+              <div class="edition-date">3 de março de 2026</div>
+              <p class="edition-desc">Como funciona o programa de bolsas de iniciação científica júnior da FAPESP e como
+                conseguir um orientador.</p>
+            </div>
+          </div>
+          <div class="edition-card">
+            <span class="edition-num">08</span>
+            <div class="edition-info">
+              <div class="edition-title">Hackathons de biotecnologia: oportunidades para 2026</div>
+              <div class="edition-date">24 de fevereiro de 2026</div>
+              <p class="edition-desc">iGEM, BIOMOD e competições brasileiras de biotech com premiação e oportunidades de
+                publicação.</p>
+            </div>
+          </div>
+          <div class="edition-card">
+            <span class="edition-num">07</span>
+            <div class="edition-info">
+              <div class="edition-title">Google Summer of Code 2026 — como se preparar</div>
+              <div class="edition-date">17 de fevereiro de 2026</div>
+              <p class="edition-desc">Passo a passo para participar do maior programa de estágios open-source do mundo,
+                com R$30k+ de bolsa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <footer>
+      <div class="footer-brand">
+        <span class="footer-logo">STEM <span>a Mais</span></span>
+        <p class="footer-tagline">Democratizando o acesso a oportunidades acadêmicas em STEM para estudantes
+          brasileiros.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a onclick="showPage('home')">Home</a></li>
+          <li><a onclick="showPage('extracurriculars')">Oportunidades</a></li>
+          <li><a onclick="showPage('about')">Sobre nós</a></li>
+          <!-- <li><a onclick="showPage('newsletters')">Newsletter</a></li> -->
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Áreas</h4>
+        <ul>
+          <li><a>Matemática</a></li>
+          <li><a>Física & Química</a></li>
+          <li><a>Biologia & Medicina</a></li>
+          <li><a>Computação</a></li>
+          <li><a>Engenharias</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <ul>
+          <li><a>stemamais.contato@gmail.com</a></li>
+          <li><a target="_blank" href="https://www.instagram.com/stemamais?igsh=MXJzejV0bGpldTZ0">Instagram</a></li>
+          <li><a target="_blank" href="https://www.tiktok.com/@stemamais?_r=1&_t=ZS-94nvWKE4wQU">Tiktok</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="footer-bottom">
+      <p>© 2026 STEM a Mais. Todos os direitos reservados.</p>
+      <p>Organização sem fins lucrativos</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
