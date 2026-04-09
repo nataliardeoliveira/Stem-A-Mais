@@ -24,7 +24,6 @@
   box-sizing: border-box;
 }
 
-/* Previne scroll horizontal global */
 html,
 body {
   overflow-x: hidden;
@@ -114,9 +113,22 @@ nav {
   display: block;
 }
 
-/* ======================== HOME ======================== */
+/* ======================== PAGE BACKGROUNDS ======================== */
+#page-extracurriculars,
+#page-home,
+#page-about,
+#page-newsletters {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+}
+
+/* ======================== HERO ======================== */
 .hero {
   min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,7 +285,7 @@ nav {
 .section {
   padding: clamp(2.5rem, 5vw, 4.4rem) clamp(1rem, 4vw, 4rem);
   max-width: 1200px;
-  margin: 20px;
+  margin: 0 auto;   /* CORRIGIDO: era margin:20px, causava overflow horizontal */
   width: 100%;
 }
 
@@ -367,29 +379,17 @@ nav {
   align-items: center;
 }
 
-/* .featured-visual {
-  background: linear-gradient(135deg, rgba(109, 40, 217, 0.2), rgba(76, 29, 149, 0.35));
-  border: 1px solid rgba(167, 139, 250, 0.2);
-  border-radius: 20px;
-  padding: 2.5rem;
-  aspect-ratio: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-} */
-
+/* Desktop: quadrado via aspect-ratio */
 .featured-visual {
   background: linear-gradient(135deg, rgba(109, 40, 217, 0.2), rgba(76, 29, 149, 0.35));
   border: 1px solid rgba(167, 139, 250, 0.2);
   border-radius: 20px;
   padding: 2.5rem;
   width: 100%;
+  aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1;
 }
 
 .featured-visual .logo {
@@ -397,10 +397,11 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 }
 
 .featured-visual .logo img {
-  width: clamp(200px, 50%, 300px);
+  width: clamp(100px, 50%, 200px);
   height: auto;
   max-width: 100%;
   display: block;
@@ -412,18 +413,6 @@ nav {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--black);
-}
-
-/* ======================== PAGE BACKGROUNDS ======================== */
-#page-extracurriculars,
-#page-home,
-#page-about,
-#page-newsletters {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
-  background-size: 50px 50px;
-  background-attachment: fixed;
 }
 
 /* ======================== OPP MINI LIST ======================== */
@@ -616,30 +605,11 @@ nav {
   flex-shrink: 0;
 }
 
-.type-pesquisa {
-  background: rgba(109, 40, 217, 0.3);
-  color: #000000;
-}
-
-.type-olimpiada {
-  background: rgba(171, 31, 199, 0.25);
-  color: #000000;
-}
-
-.type-programa {
-  background: rgba(48, 5, 150, 0.25);
-  color: #000000;
-}
-
-.type-bolsa {
-  background: rgba(224, 99, 224, 0.2);
-  color: #000000;
-}
-
-.type-competicao {
-  background: rgba(31, 0, 80, 0.25);
-  color: #000000;
-}
+.type-pesquisa   { background: rgba(109,  40, 217, 0.3);  color: #000; }
+.type-olimpiada  { background: rgba(171,  31, 199, 0.25); color: #000; }
+.type-programa   { background: rgba( 48,   5, 150, 0.25); color: #000; }
+.type-bolsa      { background: rgba(224,  99, 224, 0.2);  color: #000; }
+.type-competicao { background: rgba( 31,   0,  80, 0.25); color: #000; }
 
 .opp-org {
   font-size: 0.82rem;
@@ -1017,7 +987,7 @@ footer {
 .footer-logo span {
   color: var(--purple-400);
 }
- 
+
 .footer-tagline {
   font-size: 0.85rem;
   color: rgb(0, 0, 0);
@@ -1073,15 +1043,8 @@ footer {
 
 /* ======================== ANIMATIONS ======================== */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .page.active .hero-content,
@@ -1091,12 +1054,8 @@ footer {
   animation: fadeUp 0.6s ease both;
 }
 
-/* ======================== TABLET (max 1024px) ======================== */
+/* ======================== TABLET (769px – 1024px) ======================== */
 @media (max-width: 1024px) {
-  .footer {
-    grid-template-columns: 1fr 1fr;
-  }
-
   footer {
     grid-template-columns: 1fr 1fr;
   }
@@ -1104,19 +1063,17 @@ footer {
   .featured-split {
     gap: 2.5rem;
   }
+
+  .about-hero {
+    gap: 3rem;
+  }
 }
 
-/* ======================== MOBILE (max 768px) ======================== */
+/* ======================== MOBILE (≤ 768px) ======================== */
 @media (max-width: 768px) {
   nav {
     padding: 1rem 1.2rem;
   }
-
-.featured-visual {
-  aspect-ratio: auto;
-  min-height: 200px;
-  padding: 0.5rem;
-}
 
   .nav-links {
     display: none;
@@ -1124,7 +1081,6 @@ footer {
 
   .hero {
     padding: 7rem 1.2rem 3rem;
-    min-height: 100svh;
   }
 
   .hero-btns {
@@ -1139,13 +1095,12 @@ footer {
     text-align: center;
   }
 
-  /* Stats bar em 2 colunas no mobile */
+  /* Stats: grid 2 colunas — nunca vai cortar */
   .stats-bar {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
-    text-align: center;
-    margin-bottom: 25px;
+    padding: 1.5rem 1.2rem;
   }
 
   .stat-item {
@@ -1156,19 +1111,20 @@ footer {
     padding: 2.5rem 1.2rem;
   }
 
+  /* Featured: coluna única, altura fixa compacta, sem aspect-ratio */
   .featured-split {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .featured-visual {
     aspect-ratio: auto;
-    min-height: 260px;
-    height: auto;
+    height: 200px;
+    padding: 1.2rem;
   }
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  .featured-visual .logo img {
+    width: clamp(80px, 40%, 140px);
   }
 
   .about-hero {
@@ -1179,7 +1135,12 @@ footer {
 
   .about-visual {
     aspect-ratio: auto;
-    min-height: 280px;
+    min-height: 0;
+    padding: 1.8rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
   }
 
   .newsletter-hero {
@@ -1199,17 +1160,9 @@ footer {
     padding: 0 1.2rem 3rem;
   }
 
-  .opp-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cards-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .editions-grid {
-    grid-template-columns: 1fr;
-  }
+  .editions-grid   { grid-template-columns: 1fr; }
+  .opp-grid        { grid-template-columns: 1fr; }
+  .cards-grid      { grid-template-columns: 1fr; }
 
   footer {
     grid-template-columns: 1fr 1fr;
@@ -1232,20 +1185,42 @@ footer {
     border-radius: 16px;
   }
 
-  .filter-row {
-    gap: 0.5rem;
-  }
-
   .filter-btn {
     font-size: 0.78rem;
     padding: 0.4rem 0.9rem;
   }
 }
 
-/* ======================== SMALL MOBILE (max 400px) ======================== */
+/* ======================== PEQUENO (≤ 480px) ======================== */
+@media (max-width: 480px) {
+  .featured-visual {
+    height: 170px;
+  }
+
+  .featured-visual .logo img {
+    width: clamp(70px, 35%, 120px);
+  }
+
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================== MUITO PEQUENO (≤ 400px) ======================== */
 @media (max-width: 400px) {
+  nav {
+    padding: 0.9rem 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
   .stats-bar {
-    grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 1.2rem 1rem;
   }
@@ -1258,19 +1233,7 @@ footer {
     font-size: 0.72rem;
   }
 
-  footer {
-    grid-template-columns: 1fr;
-  }
-
-  .checkbox-group {
-    grid-template-columns: 1fr;
-  }
-
-  nav {
-    padding: 0.9rem 1rem;
-  }
-
-  .nav-logo {
-    font-size: 1.2rem;
+  .featured-visual {
+    height: 150px;
   }
 }
