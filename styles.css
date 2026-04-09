@@ -367,7 +367,7 @@ nav {
   align-items: center;
 }
 
-.featured-visual {
+/* .featured-visual {
   background: linear-gradient(135deg, rgba(109, 40, 217, 0.2), rgba(76, 29, 149, 0.35));
   border: 1px solid rgba(167, 139, 250, 0.2);
   border-radius: 20px;
@@ -378,6 +378,33 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100%;
+} */
+
+.featured-visual {
+  background: linear-gradient(135deg, rgba(109, 40, 217, 0.2), rgba(76, 29, 149, 0.35));
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+}
+
+.featured-visual .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.featured-visual .logo img {
+  width: clamp(100px, 50%, 200px);
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .featured-visual-title {
@@ -990,7 +1017,7 @@ footer {
 .footer-logo span {
   color: var(--purple-400);
 }
-
+ 
 .footer-tagline {
   font-size: 0.85rem;
   color: rgb(0, 0, 0);
@@ -1085,8 +1112,10 @@ footer {
     padding: 1rem 1.2rem;
   }
 
-  .featured-visual {
-   padding: 1.5rem;
+.featured-visual {
+  aspect-ratio: auto;
+  min-height: 200px;
+  padding: 1.5rem;
 }
 
   .nav-links {
@@ -1135,6 +1164,7 @@ footer {
   .featured-visual {
     aspect-ratio: auto;
     min-height: 260px;
+    height: auto;
   }
 
   .testimonials-grid {
