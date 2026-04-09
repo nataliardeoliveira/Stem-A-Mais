@@ -1115,7 +1115,7 @@ footer {
 .featured-visual {
   aspect-ratio: auto;
   min-height: 200px;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
   .nav-links {
