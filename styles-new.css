@@ -40,7 +40,7 @@ body {
 
 .menu {
   list-style: none;
-  display: flex;
+  display: none;
   gap: 20px;
 }
 
