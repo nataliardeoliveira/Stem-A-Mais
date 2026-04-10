@@ -37,6 +37,28 @@ body {
 }
 
 /* ======================== NAV ======================== */
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -1071,6 +1093,24 @@ footer {
 
 /* ======================== MOBILE (≤ 768px) ======================== */
 @media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #1e1e2f;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 1rem;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
   nav {
     padding: 1rem 1.2rem;
   }

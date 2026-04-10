@@ -36,6 +36,13 @@ function renderOpps(list) {
   `).join('');
 }
 
+const toggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+toggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
 renderOpps(opportunities);
 
 function typeLabel(t) {
